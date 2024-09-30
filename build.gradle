@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.fusion'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation 'com.microsoft.onnxruntime:onnxruntime:1.13.1'
+    implementation 'dev.langchain4j:langchain4j-huggingface:0.35.0'
+    implementation 'ai.djl.huggingface:tokenizers:0.16.0'
+
+    // https://mvnrepository.com/artifact/dev.langchain4j/langchain4j-hugging-face
+    implementation 'dev.langchain4j:langchain4j-hugging-face:0.35.0'
+// https://mvnrepository.com/artifact/dev.langchain4j/langchain4j-embeddings
+    implementation 'dev.langchain4j:langchain4j-embeddings:0.35.0'
+
+
+
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
